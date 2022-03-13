@@ -3,7 +3,9 @@
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 import subprocess
+import os
 
+os.system("sudo ifconfig tun0 down")
 host = "vpn.udc.es"
 driver = webdriver.Chrome("/usr/bin/chromedriver")
 wait = WebDriverWait(driver, 60)
